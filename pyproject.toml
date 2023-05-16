@@ -9,7 +9,6 @@ authors = [
 ]
 version = "0.1.0"
 readme = "README.md"
-url = "https://github.com/rwrotson/tg-reactions-randomer"
 requires-python = ">=3.11"
 license = {text = "MIT"}
 classifiers = [
@@ -20,6 +19,9 @@ dependencies = [
     "python-dotenv==1.0.0",
     "telethon==1.28.5"
 ]
+
+[project.urls]
+repository = "https://github.com/rwrotson/tg-reactions-randomer"
 
 [project.scripts]
 tg-random-reactions = "app.main:main"
