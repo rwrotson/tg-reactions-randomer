@@ -13,12 +13,12 @@ Note that the script requires Python>=3.11.
 # Usage
 
 ```
-tg-random-reactions [-h] [-i API_ID] [-s API_HASH] [-f MIN] [-t MAX] [-c CHAT_IDS [CHAT_IDS ...]] [-v CHANNEL_IDS [CHANNEL_IDS ...]] [-e ENV]
+tg-reactions-randomer [-h] [-i API_ID] [-s API_HASH] [-f MIN] [-t MAX] [-c CHAT_IDS [CHAT_IDS ...]] [-v CHANNEL_IDS [CHANNEL_IDS ...]] [-e ENV]
 ```
 
 Note that you can get help by:
 ```
-tg-random-reactions -h
+tg-reactions-randomer -h
 ```
 
 ## Prerequisites 

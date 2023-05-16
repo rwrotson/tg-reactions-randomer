@@ -30,23 +30,23 @@ async def update_all_chats_and_channels(params: Params) -> None:
     name = 'random_reactions'
     async with TelegramClient(name, params.api_id, params.api_hash) as client:
         reactions = await get_all_reactions(client)
-        funcs_to_gather = []
+        tasks_to_gather = []
 
         for chat_id in params.chat_ids:
             chosen_reacts = sample(reactions, randint(params.min, params.max))
-            funcs_to_gather.append(
+            tasks_to_gather.append(
                 set_reactions_to_entity(
                     client, chat_id, Mode.CHAT, chosen_reacts)
             )
 
         for channel_id in params.channel_ids:
             chosen_reacts = sample(reactions, randint(params.min, params.max))
-            funcs_to_gather.append(
+            tasks_to_gather.append(
                 set_reactions_to_entity(
                     client, channel_id, Mode.CHANNEL, chosen_reacts)
             )
 
-        await asyncio.gather(*funcs_to_gather)
+        await asyncio.gather(*tasks_to_gather)
 
 
 @cache

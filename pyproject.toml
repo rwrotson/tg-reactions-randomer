@@ -24,4 +24,4 @@ dependencies = [
 repository = "https://github.com/rwrotson/tg-reactions-randomer"
 
 [project.scripts]
-tg-random-reactions = "app.main:main"
+tg-reactions-randomer = "app.main:main"
