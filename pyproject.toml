@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools==65", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tg-reactions-randomer"
+authors = [
+    {name = "Igor Lashkov", email = "rwrotson@yandex.ru"},
+]
+version = "0.1.0"
+readme = "README.md"
+url = "https://github.com/rwrotson/tg-reactions-randomer"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+classifiers = [
+    'License :: OSI Approved :: MIT License',
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = [
+    "python-dotenv==1.0.0",
+    "telethon==1.28.5"
+]
+
+[project.scripts]
+tg-random-reactions = "app.main:main"
